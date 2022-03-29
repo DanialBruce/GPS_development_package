@@ -17,7 +17,7 @@ i = 0
 interval = 2
 max = len(desDataList)
 while True:
-    if i < 3:
+    if i < max:
         buf = json.dumps(desDataList[i])
         client.publish(mqttTopic ,buf)
         i += 1
